@@ -1,0 +1,57 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+      <table class="table text-white">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Leave From</th>
+            <th scope="col">Leave Upto</th>
+            <th scope="col">Leave Type</th>
+            <th scope="col">Decision</th>
+            <th scope="col">Status</th>
+
+
+
+          </tr>
+        </thead>
+        <tbody class="text center">
+          <tr style="text-transform: capitalize" *ngFor="let i of fetchedData">
+            <td> {{i.empid}}</td>
+            <td> {{i.fromDate}}</td>
+            <td> {{i.toDate}}</td>
+            <td> {{i.leaveType}}</td>
+            <td>
+              <button type="button" class="btn btn-primary btn-sm " data-bs-toggle="modal"
+                data-bs-target="#exampleModal" (click)="trigger(i.id)">
+                Check Decision
+              </button>
+              <div class="modal fade text-black" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">{{i.empid}}</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Leave Type {{leave.leaveType}}<br>
+                      No of {{leave.leaveType}} remaining - {{days}}
+                    </div>
+                    <div class="modal-footer">
+                      <br>
+                      <button class="btn btn-danger mx-2" (click)="leaveRejected(leave.id)">Reject</button>
+                      <button class="btn btn-success" (click)="leaveGranted(leave.id)">Accept</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>{{i.status}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

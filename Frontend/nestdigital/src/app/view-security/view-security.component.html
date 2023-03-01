@@ -1,0 +1,19 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="container">
+  <table class="table text-white">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of data" >
+        <td>{{i.secID}}</td>
+        <td>{{i.secName}}</td>
+        <td>{{i.phone}}</td>        
+      </tr>
+    </tbody>
+  </table>
+</div>

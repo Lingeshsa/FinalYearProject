@@ -1,0 +1,43 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="container gradient-custom-2 gradient-custom-2 text-white ">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-12 col-md-12 col-12-lg-12 col-xl-12 col-xxl-12">
+            <div class="row mt-3 g-3">
+                <div class="col-12 col-sm-12 col-12 col-md-12 col-6-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Employee ID</label>
+                    <input type="text" class="form-control" name="empid" [(ngModel)]="empid"  >
+                </div>
+                <div class="col-12 col-sm-12 col-12 col-md-12 col-6-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Employee Name</label>
+                    <input type="text" class="form-control" name="empName" [(ngModel)]="empName">
+                </div>
+                <div class="col-12 col-sm-12 col-12 col-md-12 col-6-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Phone</label>
+                    <input type="text" class="form-control" name="phone" [(ngModel)]="phone">
+                </div>
+                <div class="col-12 col-sm-12 col-12 col-md-12 col-6-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Email </label>
+                    <input type="email" class="form-control "name="mail" [(ngModel)]="mail">
+                </div>
+                <div class="col-12 col-sm-12 col-12 col-md-12 col-6-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Address</label>
+                    <textarea name="" id="" cols="3" rows="1" class="form-control"name="address" [(ngModel)]="address"></textarea>
+                </div>
+                <div class="col-12 col-sm-12 col-12 col-md-12 col-6-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Designation</label>
+                    <input type="text" class="form-control" name="designation" [(ngModel)]="designation">
+                </div>
+                <div class="col-12 col-sm-12 col-12 col-md-12 col-6-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Username </label>
+                    <input type="text" class="form-control "name="username" [(ngModel)]="username">
+                </div> <div class="col-12 col-sm-12 col-12 col-md-12 col-6-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Password </label>
+                    <input type="password" class="form-control "name="password" [(ngModel)]="password">
+                </div>
+                <div class="col-12 col-sm-12 col-12 col-md-12 col-6-lg-6 col-xl-6 col-xxl-6">
+                    <button class="btn btn-primary" (click)="readValue()">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

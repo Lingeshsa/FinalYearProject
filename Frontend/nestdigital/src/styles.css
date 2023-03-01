@@ -1,0 +1,18 @@
+
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: rgb(208, 34, 39);
+    background: linear-gradient(22deg,
+            rgba(208, 34, 39, 1) 0%,
+            rgba(35, 61, 124, 1) 100%);
+}
+.navbar{
+background-color: white;
+
+}
